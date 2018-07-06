@@ -12,7 +12,8 @@ Simply 1.) change the start URLs you are gathering data from,
 2.) increase the number of pages you want to scrape, and/or 
 3.) use your browser (Firefox or Chrome) to inspect the elements you are scraping and change your xpath accordingly.
 
-`class Fundrazr(scrapy.Spider):
+`
+class Fundrazr(scrapy.Spider):
 	name = "my_scraper"
 
 	# 1.
