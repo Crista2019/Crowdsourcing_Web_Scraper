@@ -12,10 +12,8 @@ Simply 1.) change the start URLs you are gathering data from,
 2.) increase the number of pages you want to scrape, and/or 
 3.) use your browser (Firefox or Chrome) to inspect the elements you are scraping and change your xpath accordingly.
 
+*In Fundrazr_scrape.py:*
 `
-class Fundrazr(scrapy.Spider):
-	name = "my_scraper"
-
 	# 1.
 	start_urls = ["https://fundrazr.com/find?search=films%20and%20animation"]
 
@@ -30,4 +28,7 @@ class Fundrazr(scrapy.Spider):
 		for href in response.xpath("//h2[contains(@class, 'title headline-font')]/a[contains(@class, 'campaign-link')]//@href"):
 			# add the scheme, eg http://
 			url  = "https:" + href.extract()
-			yield scrapy.Request(url, callback=self.parse_dir_contents)`
+			yield scrapy.Request(url, callback=self.parse_dir_contents)
+	...
+			
+			`
