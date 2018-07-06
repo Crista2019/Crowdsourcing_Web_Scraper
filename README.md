@@ -13,8 +13,12 @@ Simply 1.) change the start URLs you are gathering data from,
 3.) use your browser (Firefox or Chrome) to inspect the elements you are scraping and change your xpath accordingly.
 
 *In Fundrazr_scrape.py:*
-`
-	# 1.
+
+````python	
+class Fundrazr(scrapy.Spider):
+	name = "my_scraper"
+	
+    # 1.
 	start_urls = ["https://fundrazr.com/find?search=films%20and%20animation"]
 
 	npages = 2
@@ -31,4 +35,4 @@ Simply 1.) change the start URLs you are gathering data from,
 			yield scrapy.Request(url, callback=self.parse_dir_contents)
 	...
 			
-			`
+```
