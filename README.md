@@ -1,13 +1,13 @@
-# WebCrawler
+# Croudsourcing Web Scraper
 A small Python web-scraper based in Scrapy to crawl different crowdfunding campaigns for and animated films, write specific data to a file, and determine what common traits the most successful campaigns share
 
-# Running Web Scrawler
+## Running Web Scrawler
 To run this program, make sure you have Scrapy framework installed,
 navigate to *web_scraping\crowdsourcing*,
 and run the command
 `scrapy crawl my_scraper -o MonthDay_Year.json` or `scrapy crawl my_scraper -o MonthDay_Year.csv`
 
-# To change info gathered
+## To change info gathered
 Simply 1.) change the start URLs you are gathering data from, 
 2.) increase the number of pages you want to scrape, and/or 
 3.) use your browser (Firefox or Chrome) to inspect the elements you are scraping and change your xpath accordingly.
@@ -36,3 +36,5 @@ class Fundrazr(scrapy.Spider):
 	...
 			
 ```
+
+Much thanks to Toward Data Science for the awesome tutorial on building your own dataset using Scrapy.
